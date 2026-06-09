@@ -9,14 +9,20 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background: #0b3d2e;
     color: white;
     text-align: center;
+
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 header {
     padding: 30px 15px;
-    background: #06281e;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(4px);
 }
 
 h1 {
@@ -81,7 +87,7 @@ table {
     max-width: 850px;
     margin: 30px auto;
     border-collapse: collapse;
-    background: white;
+    background: rgba(255,255,255,0.95);
     color: #111;
     border-radius: 12px;
     overflow: hidden;
@@ -100,6 +106,16 @@ td {
 footer {
     margin: 30px;
     color: #ddd;
+}
+
+.mensaje-admin {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.92);
+    color: #111;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 @media (max-width: 700px) {
@@ -122,18 +138,11 @@ footer {
 <header>
     <h1>⚽ Polla Futbolera Da Vinci F.C⚽</h1>
     <p>Tabla de posiciones actualizada</p>
-    <p class="fecha">Actualizado: 08-06-2026 20:58</p>
+    <p class="fecha">Actualizado: 08-06-2026 21:53</p>
 </header>
 
-<section style="
-    max-width:900px;
-    margin:20px auto;
-    padding:20px;
-    background:white;
-    color:#111;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
-">
+<section class="mensaje-admin">
+
     <h2>📢 Mensaje del Administrador</h2>
     <p>
 ⚽ Jornada completada.
