@@ -1,8 +1,15 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
 <title>Polla Futbolera Da Vinci F.C</title>
 
 <style>
@@ -21,7 +28,7 @@ body {
 
 header {
     padding: 30px 15px;
-    background: rgba(0,0,0,0.75);
+    background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(4px);
 }
 
@@ -32,6 +39,17 @@ h1 {
 
 .fecha {
     color: #ddd;
+}
+
+.mensaje-admin {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #111;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .podio {
@@ -49,22 +67,23 @@ h1 {
     border-radius: 18px 18px 0 0;
     padding: 20px;
     width: 220px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     font-weight: bold;
 }
 
 .primero {
-    height: 220px;
+    min-height: 220px;
     background: #ffd700;
 }
 
 .segundo {
-    height: 170px;
+    min-height: 170px;
     background: #c0c0c0;
 }
 
 .tercero {
-    height: 140px;
+    min-height: 140px;
     background: #cd7f32;
 }
 
@@ -82,12 +101,22 @@ h1 {
     margin-top: 10px;
 }
 
+.detalle-podio {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
 table {
-    width: 90%;
-    max-width: 850px;
+    width: 92%;
+    max-width: 1050px;
     margin: 30px auto;
     border-collapse: collapse;
-    background: rgba(255,255,255,0.95);
+    background: rgba(255, 255, 255, 0.95);
     color: #111;
     border-radius: 12px;
     overflow: hidden;
@@ -103,22 +132,30 @@ td {
     border-bottom: 1px solid #ddd;
 }
 
+.bonus {
+    color: #16823c;
+    font-weight: bold;
+}
+
+.sin-bonus {
+    color: #777;
+}
+
+.puntaje-final {
+    font-size: 17px;
+    font-weight: bold;
+}
+
 footer {
     margin: 30px;
     color: #ddd;
 }
 
-.mensaje-admin {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background: rgba(255,255,255,0.92);
-    color: #111;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
 @media (max-width: 700px) {
+    h1 {
+        font-size: 28px;
+    }
+
     .podio {
         flex-direction: column;
         align-items: center;
@@ -126,11 +163,16 @@ footer {
 
     .puesto {
         width: 80%;
-        height: auto !important;
+        min-height: auto;
         border-radius: 18px;
+    }
+
+    table {
+        min-width: 850px;
     }
 }
 </style>
+
 </head>
 
 <body>
@@ -138,369 +180,1339 @@ footer {
 <header>
     <h1>⚽ Polla Futbolera Da Vinci F.C ⚽</h1>
     <p>Tabla de posiciones actualizada</p>
-    <p class="fecha">Actualizado: 17-07-2026 17:58</p>
+    <p class="fecha">Actualizado: 20-07-2026 21:45</p>
 </header>
 
 <section class="mensaje-admin">
     <h2>📢 Mensaje del Administrador</h2>
-    <p>
-⚽ Jornada completada.
-
-A la espera de la final, hay una diferencia de 9 puntos para ver quién es el campeón de la polla.
-Alcanzaran a bajar Bastian?🔥
-
-🔥 Se viene una fecha clave estos días.
-</p>
+    <p>⚽ Jornada completada.<br><br>Después de 104 partidos, tenemos al mejor para la<br><br>polla!  Felicitamos a Bastian Figueroa que estuvo en la punta de ésta de principio a fin.<br><br>Agradecemos a todos quienes aportaron a la tradicional Polla Da vinci!<br><br>Que siga rodando y nos vemos en la copa américa ! 🔥<br><br>🔥 Se viene una fecha clave estos días.</p>
 </section>
 
 <section class="podio">
 
 <div class="puesto segundo">
     <div class="emoji">🥈</div>
-    <div class="nombre">Carlos Nuñez</div>
-    <div class="puntaje">93 pts</div>
+    <div class="nombre">
+        Angel Pereda
+    </div>
+    <div class="puntaje">
+        99 pts
+    </div>
+    <div class="detalle-podio">
+        Base: 89
+        · Bonus: +10
+    </div>
 </div>
 
 <div class="puesto primero">
     <div class="emoji">🥇</div>
-    <div class="nombre">Bastian Figueroa</div>
-    <div class="puntaje">102 pts</div>
+    <div class="nombre">
+        Bastian Figueroa
+    </div>
+    <div class="puntaje">
+        107 pts
+    </div>
+    <div class="detalle-podio">
+        Base: 102
+        · Bonus: +5
+    </div>
 </div>
 
 <div class="puesto tercero">
     <div class="emoji">🥉</div>
-    <div class="nombre">Miguel Silva</div>
-    <div class="puntaje">92 pts</div>
+    <div class="nombre">
+        Enzo Reyes
+    </div>
+    <div class="puntaje">
+        98 pts
+    </div>
+    <div class="detalle-podio">
+        Base: 88
+        · Bonus: +10
+    </div>
 </div>
 
 </section>
 
 <h2>Tabla general</h2>
 
+<div class="tabla-contenedor">
+
 <table>
+
 <tr>
     <th>Posición</th>
     <th>Jugador</th>
-    <th>Puntaje</th>
+    <th>Puntaje G83</th>
+    <th>Bonus</th>
+    <th>Puntaje total</th>
     <th>Resultados exactos</th>
+    <th>Bonus acertados</th>
 </tr>
 
 <tr>
     <td>1</td>
-    <td>Bastian Figueroa</td>
-    <td>102 pts</td>
-    <td>20</td>
+
+    <td>
+        Bastian Figueroa
+    </td>
+
+    <td>
+        102 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        107 pts
+    </td>
+
+    <td>
+        20
+    </td>
+
+    <td>
+        Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>2</td>
-    <td>Carlos Nuñez</td>
-    <td>93 pts</td>
-    <td>17</td>
+
+    <td>
+        Angel Pereda
+    </td>
+
+    <td>
+        89 pts
+    </td>
+
+    <td class="bonus">
+        +10 pts
+    </td>
+
+    <td class="puntaje-final">
+        99 pts
+    </td>
+
+    <td>
+        17
+    </td>
+
+    <td>
+        España, Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>3</td>
-    <td>Miguel Silva</td>
-    <td>92 pts</td>
-    <td>15</td>
+
+    <td>
+        Enzo Reyes
+    </td>
+
+    <td>
+        88 pts
+    </td>
+
+    <td class="bonus">
+        +10 pts
+    </td>
+
+    <td class="puntaje-final">
+        98 pts
+    </td>
+
+    <td>
+        13
+    </td>
+
+    <td>
+        España, Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>4</td>
-    <td>Angel Pereda</td>
-    <td>88 pts</td>
-    <td>17</td>
+
+    <td>
+        Miguel Silva
+    </td>
+
+    <td>
+        92 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        97 pts
+    </td>
+
+    <td>
+        15
+    </td>
+
+    <td>
+        España
+    </td>
 </tr>
 
 <tr>
     <td>5</td>
-    <td>Enzo Reyes</td>
-    <td>88 pts</td>
-    <td>13</td>
+
+    <td>
+        Roberto Solis
+    </td>
+
+    <td>
+        86 pts
+    </td>
+
+    <td class="bonus">
+        +10 pts
+    </td>
+
+    <td class="puntaje-final">
+        96 pts
+    </td>
+
+    <td>
+        14
+    </td>
+
+    <td>
+        España, Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>6</td>
-    <td>Seba Roco</td>
-    <td>86 pts</td>
-    <td>14</td>
+
+    <td>
+        Seba Roco
+    </td>
+
+    <td>
+        89 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        94 pts
+    </td>
+
+    <td>
+        14
+    </td>
+
+    <td>
+        Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>7</td>
-    <td>Roberto Solis</td>
-    <td>86 pts</td>
-    <td>14</td>
+
+    <td>
+        Carlos Nuñez
+    </td>
+
+    <td>
+        93 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        93 pts
+    </td>
+
+    <td>
+        17
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>8</td>
-    <td>Camilo Figueroa</td>
-    <td>83 pts</td>
-    <td>12</td>
+
+    <td>
+        Benito Camelo
+    </td>
+
+    <td>
+        81 pts
+    </td>
+
+    <td class="bonus">
+        +10 pts
+    </td>
+
+    <td class="puntaje-final">
+        91 pts
+    </td>
+
+    <td>
+        13
+    </td>
+
+    <td>
+        España, Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>9</td>
-    <td>Felipe Morales</td>
-    <td>81 pts</td>
-    <td>14</td>
+
+    <td>
+        Los Magos
+    </td>
+
+    <td>
+        84 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        89 pts
+    </td>
+
+    <td>
+        13
+    </td>
+
+    <td>
+        Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>10</td>
-    <td>Benito Camelo</td>
-    <td>81 pts</td>
-    <td>13</td>
+
+    <td>
+        David Ignacio
+    </td>
+
+    <td>
+        84 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        89 pts
+    </td>
+
+    <td>
+        13
+    </td>
+
+    <td>
+        España
+    </td>
 </tr>
 
 <tr>
     <td>11</td>
-    <td>Los Magos</td>
-    <td>81 pts</td>
-    <td>13</td>
+
+    <td>
+        Camilo Figueroa
+    </td>
+
+    <td>
+        83 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        88 pts
+    </td>
+
+    <td>
+        12
+    </td>
+
+    <td>
+        Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>12</td>
-    <td>David Ignacio</td>
-    <td>81 pts</td>
-    <td>13</td>
+
+    <td>
+        Taller M1
+    </td>
+
+    <td>
+        80 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        85 pts
+    </td>
+
+    <td>
+        11
+    </td>
+
+    <td>
+        Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>13</td>
-    <td>Davinho</td>
-    <td>81 pts</td>
-    <td>13</td>
+
+    <td>
+        Felipe Morales
+    </td>
+
+    <td>
+        84 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        84 pts
+    </td>
+
+    <td>
+        14
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>14</td>
-    <td>Davitina</td>
-    <td>81 pts</td>
-    <td>13</td>
+
+    <td>
+        Davinho
+    </td>
+
+    <td>
+        84 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        84 pts
+    </td>
+
+    <td>
+        13
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>15</td>
-    <td>Alonso Aranguiz</td>
-    <td>79 pts</td>
-    <td>13</td>
+
+    <td>
+        Davitina
+    </td>
+
+    <td>
+        84 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        84 pts
+    </td>
+
+    <td>
+        13
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>16</td>
-    <td>Negro8</td>
-    <td>79 pts</td>
-    <td>10</td>
+
+    <td>
+        Negro8
+    </td>
+
+    <td>
+        79 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        84 pts
+    </td>
+
+    <td>
+        10
+    </td>
+
+    <td>
+        España
+    </td>
 </tr>
 
 <tr>
     <td>17</td>
-    <td>Malaya</td>
-    <td>78 pts</td>
-    <td>12</td>
+
+    <td>
+        Yeremi Veliz
+    </td>
+
+    <td>
+        79 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        84 pts
+    </td>
+
+    <td>
+        10
+    </td>
+
+    <td>
+        Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>18</td>
-    <td>Yeremi Veliz</td>
-    <td>78 pts</td>
-    <td>10</td>
+
+    <td>
+        Malaya
+    </td>
+
+    <td>
+        78 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        83 pts
+    </td>
+
+    <td>
+        12
+    </td>
+
+    <td>
+        Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>19</td>
-    <td>Ignacio Verdugo</td>
-    <td>78 pts</td>
-    <td>9</td>
+
+    <td>
+        Felipe Rivera
+    </td>
+
+    <td>
+        76 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        81 pts
+    </td>
+
+    <td>
+        10
+    </td>
+
+    <td>
+        Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>20</td>
-    <td>Cotelo</td>
-    <td>76 pts</td>
-    <td>11</td>
+
+    <td>
+        Alonso Aranguiz
+    </td>
+
+    <td>
+        80 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        80 pts
+    </td>
+
+    <td>
+        13
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>21</td>
-    <td>Vicente Milic</td>
-    <td>76 pts</td>
-    <td>9</td>
+
+    <td>
+        Vicente Milic
+    </td>
+
+    <td>
+        80 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        80 pts
+    </td>
+
+    <td>
+        9
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>22</td>
-    <td>Gabriel Pellicer</td>
-    <td>76 pts</td>
-    <td>9</td>
+
+    <td>
+        Sebastian Fuentes
+    </td>
+
+    <td>
+        75 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        80 pts
+    </td>
+
+    <td>
+        8
+    </td>
+
+    <td>
+        Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>23</td>
-    <td>Taller M1</td>
-    <td>75 pts</td>
-    <td>10</td>
+
+    <td>
+        Cotelo
+    </td>
+
+    <td>
+        79 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        79 pts
+    </td>
+
+    <td>
+        11
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>24</td>
-    <td>Nicolas Gatica</td>
-    <td>75 pts</td>
-    <td>10</td>
+
+    <td>
+        Ignacio Verdugo
+    </td>
+
+    <td>
+        79 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        79 pts
+    </td>
+
+    <td>
+        9
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>25</td>
-    <td>Felipe Rivera</td>
-    <td>73 pts</td>
-    <td>10</td>
+
+    <td>
+        Gabriel Pellicer
+    </td>
+
+    <td>
+        79 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        79 pts
+    </td>
+
+    <td>
+        9
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>26</td>
-    <td>Raul Muñoz</td>
-    <td>73 pts</td>
-    <td>7</td>
+
+    <td>
+        Raul Muñoz
+    </td>
+
+    <td>
+        74 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        79 pts
+    </td>
+
+    <td>
+        7
+    </td>
+
+    <td>
+        España
+    </td>
 </tr>
 
 <tr>
     <td>27</td>
-    <td>Sebastian Fuentes</td>
-    <td>72 pts</td>
-    <td>8</td>
+
+    <td>
+        Givens
+    </td>
+
+    <td>
+        68 pts
+    </td>
+
+    <td class="bonus">
+        +10 pts
+    </td>
+
+    <td class="puntaje-final">
+        78 pts
+    </td>
+
+    <td>
+        6
+    </td>
+
+    <td>
+        España, Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>28</td>
-    <td>Manuel Verdugo</td>
-    <td>70 pts</td>
-    <td>10</td>
+
+    <td>
+        Nicolas Gatica
+    </td>
+
+    <td>
+        76 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        76 pts
+    </td>
+
+    <td>
+        10
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>29</td>
-    <td>Mariela</td>
-    <td>68 pts</td>
-    <td>9</td>
+
+    <td>
+        Mariela
+    </td>
+
+    <td>
+        71 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        76 pts
+    </td>
+
+    <td>
+        9
+    </td>
+
+    <td>
+        Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>30</td>
-    <td>Jorge Muñoz</td>
-    <td>64 pts</td>
-    <td>8</td>
+
+    <td>
+        Nicolas Arellano
+    </td>
+
+    <td>
+        69 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        74 pts
+    </td>
+
+    <td>
+        7
+    </td>
+
+    <td>
+        Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>31</td>
-    <td>Claudio Moreno</td>
-    <td>61 pts</td>
-    <td>9</td>
+
+    <td>
+        Jorge Muñoz
+    </td>
+
+    <td>
+        67 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        72 pts
+    </td>
+
+    <td>
+        8
+    </td>
+
+    <td>
+        Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>32</td>
-    <td>Nicolas Arellano</td>
-    <td>61 pts</td>
-    <td>7</td>
+
+    <td>
+        Manuel Verdugo
+    </td>
+
+    <td>
+        71 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        71 pts
+    </td>
+
+    <td>
+        10
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>33</td>
-    <td>Chiko</td>
-    <td>58 pts</td>
-    <td>8</td>
+
+    <td>
+        Alvaro Venegas
+    </td>
+
+    <td>
+        61 pts
+    </td>
+
+    <td class="bonus">
+        +10 pts
+    </td>
+
+    <td class="puntaje-final">
+        71 pts
+    </td>
+
+    <td>
+        3
+    </td>
+
+    <td>
+        España, Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>34</td>
-    <td>Javiera Oyanedel</td>
-    <td>57 pts</td>
-    <td>6</td>
+
+    <td>
+        Claudio Moreno
+    </td>
+
+    <td>
+        70 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        70 pts
+    </td>
+
+    <td>
+        9
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>35</td>
-    <td>Givens</td>
-    <td>55 pts</td>
-    <td>6</td>
+
+    <td>
+        Javiera Oyanedel
+    </td>
+
+    <td>
+        65 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        70 pts
+    </td>
+
+    <td>
+        6
+    </td>
+
+    <td>
+        Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>36</td>
-    <td>Matias Fontanilla</td>
-    <td>48 pts</td>
-    <td>5</td>
+
+    <td>
+        Chiko
+    </td>
+
+    <td>
+        66 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        66 pts
+    </td>
+
+    <td>
+        8
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>37</td>
-    <td>Alvaro Venegas</td>
-    <td>48 pts</td>
-    <td>3</td>
+
+    <td>
+        Andres Navarrete
+    </td>
+
+    <td>
+        60 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        65 pts
+    </td>
+
+    <td>
+        5
+    </td>
+
+    <td>
+        Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>38</td>
-    <td>Andres Navarrete</td>
-    <td>47 pts</td>
-    <td>5</td>
+
+    <td>
+        Matias Fontanilla
+    </td>
+
+    <td>
+        58 pts
+    </td>
+
+    <td class="bonus">
+        +5 pts
+    </td>
+
+    <td class="puntaje-final">
+        63 pts
+    </td>
+
+    <td>
+        5
+    </td>
+
+    <td>
+        Mbappé
+    </td>
 </tr>
 
 <tr>
     <td>39</td>
-    <td>Seba Gutierrez</td>
-    <td>46 pts</td>
-    <td>5</td>
+
+    <td>
+        Seba Gutierrez
+    </td>
+
+    <td>
+        59 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        59 pts
+    </td>
+
+    <td>
+        5
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>40</td>
-    <td>Chino</td>
-    <td>46 pts</td>
-    <td>5</td>
+
+    <td>
+        Chino
+    </td>
+
+    <td>
+        59 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        59 pts
+    </td>
+
+    <td>
+        5
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>41</td>
-    <td>Thieso Delano</td>
-    <td>46 pts</td>
-    <td>5</td>
+
+    <td>
+        Thieso Delano
+    </td>
+
+    <td>
+        59 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        59 pts
+    </td>
+
+    <td>
+        5
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>42</td>
-    <td>Jorge Pino</td>
-    <td>37 pts</td>
-    <td>0</td>
+
+    <td>
+        Jorge Pino
+    </td>
+
+    <td>
+        50 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        50 pts
+    </td>
+
+    <td>
+        0
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>43</td>
-    <td>Matias Fernandez</td>
-    <td>29 pts</td>
-    <td>3</td>
+
+    <td>
+        Matias Vega
+    </td>
+
+    <td>
+        48 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        48 pts
+    </td>
+
+    <td>
+        0
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>44</td>
-    <td>Matias Vega</td>
-    <td>1 pts</td>
-    <td>0</td>
+
+    <td>
+        Matias Fernandez
+    </td>
+
+    <td>
+        39 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        39 pts
+    </td>
+
+    <td>
+        3
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 <tr>
     <td>45</td>
-    <td>----------</td>
-    <td>0 pts</td>
-    <td>0</td>
+
+    <td>
+        ----------
+    </td>
+
+    <td>
+        0 pts
+    </td>
+
+    <td class="sin-bonus">
+        +0 pts
+    </td>
+
+    <td class="puntaje-final">
+        0 pts
+    </td>
+
+    <td>
+        0
+    </td>
+
+    <td>
+        Ninguno
+    </td>
 </tr>
 
 </table>
+
+</div>
 
 <footer>
     Informe generado automáticamente para la Polla Futbolera.
